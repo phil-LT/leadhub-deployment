@@ -1,0 +1,27 @@
+
+[Unit]
+
+Description=LeadHub Professional
+
+After=network.target
+
+
+[Service]
+
+Type=simple
+
+User=ubuntu
+
+WorkingDirectory=/home/ubuntu/lead_hub
+
+Environment=PATH=/home/ubuntu/lead_hub/venv/bin
+
+ExecStart=/home/ubuntu/lead_hub/venv/bin/python viewer.py
+
+Restart=always
+
+
+[Install]
+
+WantedBy=multi-user.target
+
